@@ -597,61 +597,6 @@ header .one {
     /* slike se lepo uklapaju */
 }
 
-/* RESPONSIVE: mobilni uređaji */
-@media (max-width: 768px) {
-    .bunar-section {
-        max-width: 95%;
-    }
-
-    .bunar-row,
-    .vending-row {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .bunar-row .block,
-    .vending-row .block {
-        max-width: 100%;
-    }
-
-    .bunar-row .block img,
-    .vending-row .block img {
-        height: auto;
-    }
-}
-
-/* RESPONSIVE: ekrani < 768px */
-@media (max-width: 768px) {
-    .cartoon-factory {
-        max-width: 95%;
-    }
-
-    .cartoon-factory .row {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .first-row .title,
-    .first-row .video,
-    .second-row .card {
-        flex: unset;
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .first-row .title {
-        text-align: center;
-    }
-
-    .second-row .card img {
-        height: 200px;
-        /* manje na mobilnim */
-    }
-}
-
-/* Dodavanje responsivnosti za manje ekrane */
-@media (max-width: 768px) {}
-
 @media (max-width: 1200px) {
     .program-item img {
         width: 4.5rem;
@@ -823,6 +768,59 @@ header .one {
         font-size: 2rem;
     }
 
+    .cartoon-factory {
+        max-width: 95%;
+    }
+
+    .cartoon-factory .row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .first-row .img {
+        max-width: 80%;
+    }
+
+    .first-row .title,
+    .first-row .video,
+    .second-row .card {
+        flex: unset;
+        max-width: 60%;
+        width: 60%;
+    }
+
+    .first-row .title h2 {
+        font-size: 3rem;
+    }
+
+    .first-row .title {
+        text-align: center;
+    }
+
+    .second-row .card img {
+        height: 200px;
+        /* manje na mobilnim */
+    }
+
+    .bunar-section {
+        max-width: 95%;
+    }
+
+    .bunar-row,
+    .vending-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .bunar-row .block,
+    .vending-row .block {
+        max-width: 100%;
+    }
+
+    .bunar-row .block img,
+    .vending-row .block img {
+        height: auto;
+    }
 }
 
 @media (max-width: 480px) {
