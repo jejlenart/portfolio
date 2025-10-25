@@ -467,6 +467,188 @@ header .one {
     color: var(--text-color);
 }
 
+/* ********** 3D *************** */
+.factory-section {
+    background-color: black;
+    color: white;
+    /* da tekst bude vidljiv na crnoj pozadini */
+    padding: 40px 0;
+    /* opcionalno, da bude razmak od ivica */
+}
+
+.factory-section video,
+.factory-section img {
+    display: block;
+    max-width: 100%;
+}
+
+.hero {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero video {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.section {
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+
+.cartoon-factory {
+    max-width: 70%;
+    /* Sekcija zauzima 70% širine ekrana */
+    margin: 0 auto;
+}
+
+/* Redovi */
+.cartoon-factory .row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+/* Prvi red: naslov i video */
+.first-row .title {
+    flex: 1;
+    /* Naslov zauzima polovinu prvog reda */
+    max-width: 50%;
+}
+
+.first-row .title h2 {
+    margin: 0;
+}
+
+.first-row .video {
+    flex: 1;
+    /* Video zauzima drugu polovinu */
+    max-width: 50%;
+}
+
+/* Video da se skaluje lepo */
+.first-row .video video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Drugi red: tri slike fabrike */
+.second-row {
+    display: flex;
+}
+
+.second-row .card {
+    flex: 1;
+}
+
+.second-row .card img {
+    width: 100%;
+    /* sve slike iste visine */
+    object-fit: cover;
+    /* slike se prilagođavaju okvirima */
+    display: block;
+}
+
+.card2 img {
+    padding-bottom: 50px;
+}
+
+/* bunari */
+.bunar-section {
+    max-width: 70%;
+    /* Sekcija zauzima 70% širine ekrana */
+    margin: 2rem auto;
+}
+
+/* Redovi */
+.bunar-row,
+.vending-row {
+    display: flex;
+    gap: 20px;
+    /* razmak između slika */
+    margin-bottom: 20px;
+}
+
+/* Svaka slika zauzima polovinu reda */
+.bunar-row .block,
+.vending-row .block {
+    flex: 1;
+    max-width: 50%;
+}
+
+.bunar-row .block img,
+.vending-row .block img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* slike se lepo uklapaju */
+}
+
+/* RESPONSIVE: mobilni uređaji */
+@media (max-width: 768px) {
+    .bunar-section {
+        max-width: 95%;
+    }
+
+    .bunar-row,
+    .vending-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .bunar-row .block,
+    .vending-row .block {
+        max-width: 100%;
+    }
+
+    .bunar-row .block img,
+    .vending-row .block img {
+        height: auto;
+    }
+}
+
+/* RESPONSIVE: ekrani < 768px */
+@media (max-width: 768px) {
+    .cartoon-factory {
+        max-width: 95%;
+    }
+
+    .cartoon-factory .row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .first-row .title,
+    .first-row .video,
+    .second-row .card {
+        flex: unset;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .first-row .title {
+        text-align: center;
+    }
+
+    .second-row .card img {
+        height: 200px;
+        /* manje na mobilnim */
+    }
+}
+
 /* Dodavanje responsivnosti za manje ekrane */
 @media (max-width: 768px) {}
 
