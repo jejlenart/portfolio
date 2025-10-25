@@ -130,3 +130,18 @@ btn2d.addEventListener("click", () => {
 btn3d.addEventListener("click", () => {
   showGroup(group3d, group2d, btn3d, btn2d);
 });
+
+const scrollBtn = document.getElementById("scrollTopBtn");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+
+const yearSpan = document.getElementById("year");
+const currentYear = new Date().getFullYear();
+yearSpan.textContent = currentYear;
+

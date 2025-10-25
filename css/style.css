@@ -597,6 +597,94 @@ header .one {
     /* slike se lepo uklapaju */
 }
 
+/* ----------------------------- */
+/* Scroll to top dugme - centrirano i animirano */
+/* ----------------------------- */
+
+.scroll-top {
+    position: fixed;
+    bottom: 40px;
+    right: 50%;
+    transform: translateX(50%) translateY(20px);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    border: 1px solid rgba(180, 180, 180, 0.25);
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s ease;
+    z-index: 120;
+}
+
+/* SVG strelica */
+.scroll-top svg {
+    stroke: #e6e6e6;
+    width: 26px;
+    height: 26px;
+    transition: stroke 0.3s ease, transform 0.3s ease;
+}
+
+/* Kada se pojavi (fade in + blago podizanje) */
+.scroll-top.show {
+    opacity: 0.9;
+    transform: translateX(50%) translateY(0);
+    pointer-events: auto;
+}
+
+/* Hover efekat - lebdenje i pojačan sjaj */
+.scroll-top:hover {
+    opacity: 1;
+    transform: translateX(50%) translateY(-6px) scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+}
+
+.scroll-top:hover svg {
+    stroke: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* RESPONSIVE verzija */
+@media (max-width: 768px) {
+    .scroll-top {
+        width: 46px;
+        height: 46px;
+        bottom: 25px;
+        backdrop-filter: blur(4px);
+    }
+
+    .scroll-top svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .scroll-top {
+        width: 44px;
+        height: 44px;
+        bottom: 20px;
+        right: 20px;
+        backdrop-filter: blur(4px);
+    }
+
+    .scroll-top svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
 @media (max-width: 1200px) {
     .program-item img {
         width: 4.5rem;
