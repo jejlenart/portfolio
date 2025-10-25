@@ -709,14 +709,14 @@ header .one {
     .me {
         width: 100%;
         /* Slika uzima celu širinu na manjim ekranima */
-        margin-bottom: 2rem;
+        /* margin-bottom: 2rem; */
         /* Dodajemo razmak između slike i teksta */
     }
 
     .me img {
         width: 60%;
         /* Slika manja na mobilnim uređajima */
-        margin-bottom: 2rem;
+        /* margin-bottom: 2rem; */
         /* Razmak između slike i teksta */
     }
 
@@ -837,7 +837,15 @@ header .one {
     .experience,
     .education {
         width: 100%;
-        padding: 1rem 0;
+        padding-bottom: 1rem;
+    }
+
+    .experience {
+        margin-top: 1rem;
+    }
+
+    .education {
+        padding-top: 1rem;
     }
 
     .aboutme p {
