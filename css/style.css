@@ -429,7 +429,8 @@ header .one {
 
 .btn {
     background: var(--main-color);
-    border-radius: 0.5rem;
+    border: 2px solid black;
+    /* border-radius: 0.1rem; */
     padding: 1rem;
 }
 
@@ -1007,14 +1008,14 @@ header .one {
     display: flex;
     justify-content: center;
     /* centriranje */
-    gap: 15px;
+    gap: 30px;
     margin-top: 20px;
 }
 
 .btn-group button {
-    padding: 12px 28px;
-    border: none;
-    border-radius: 25px;
+    padding: 6px 28px;
+    border: 5px black double;
+    border-radius: 15px;
     /* oblo kao na formi */
     background: var(--main-color);
     /* ista boja kao primarna */
@@ -1023,7 +1024,7 @@ header .one {
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-group button:hover {
